@@ -11,6 +11,47 @@
   to = "/corporate/"
   status = 301
 
+# Flat file routing — map trailing-slash URLs to .html files
+[[redirects]]
+  from = "/weddings/"
+  to = "/weddings.html"
+  status = 200
+
+[[redirects]]
+  from = "/corporate/"
+  to = "/corporate.html"
+  status = 200
+
+[[redirects]]
+  from = "/sweet-16-quinceanera/"
+  to = "/sweet-16-quinceanera.html"
+  status = 200
+
+[[redirects]]
+  from = "/birthday-parties/"
+  to = "/birthday-parties.html"
+  status = 200
+
+[[redirects]]
+  from = "/book/"
+  to = "/book.html"
+  status = 200
+
+[[redirects]]
+  from = "/jacksonville-photobooth-rental/"
+  to = "/jacksonville-photobooth-rental.html"
+  status = 200
+
+[[redirects]]
+  from = "/orange-park-photobooth-rental/"
+  to = "/orange-park-photobooth-rental.html"
+  status = 200
+
+[[redirects]]
+  from = "/st-augustine-photobooth-rental/"
+  to = "/st-augustine-photobooth-rental.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
