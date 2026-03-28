@@ -21,7 +21,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Pronto Photobooths",
-    "description": "Drop-off, unmanned photobooth rentals for weddings, corporate events, and celebrations across Northeast Florida. All-day flat rate starting at $300.",
+    "description": "Drop-off, unmanned photobooth rentals for weddings, corporate events, and celebrations across Northeast Florida. Starting at $300 for your entire event.",
     "url": "https://prontophotobooths.com",
     "telephone": "904-217-7078",
     "email": "info@prontophotobooths.com",
@@ -799,7 +799,7 @@
         </ul>
         <div class="nav-cta">
           <a href="tel:9042177078" class="nav-phone">📞 904-217-7078</a>
-          <a href="/contact/" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Get a Quote</a>
+          <a href="/book/" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Book Now</a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -815,7 +815,7 @@
     <a href="/sweet-16-quinceanera/">Sweet 16 &amp; Quinceañera</a>
     <a href="/birthday-parties/">Parties</a>
     <a href="tel:9042177078">📞 904-217-7078</a>
-    <a href="/contact/" class="btn btn-primary" style="text-align:center;">Get a Free Quote</a>
+    <a href="/book/" class="btn btn-primary" style="text-align:center;">Book Now</a>
   </div>
 
   <!-- ── HERO ── -->
@@ -944,7 +944,7 @@
           <div class="event-card-img"><img src="images/event-birthday.jpg" alt="Birthday and party photobooth rental Northeast Florida" style="width:100%;height:100%;object-fit:cover;" /></div>
           <div class="event-card-body">
             <h3>Birthday &amp; party photobooths</h3>
-            <p>All-day fun for milestone birthdays, anniversary parties, baby showers, graduations, and family reunions. Serving all of Northeast Florida at one flat rate.</p>
+            <p>All-day fun for milestone birthdays, anniversary parties, baby showers, graduations, and family reunions. Serving all of Northeast Florida — your entire event covered.</p>
             <span class="event-link">See party packages</span>
           </div>
         </a>
@@ -965,7 +965,7 @@
         <div class="why-card">
           <div class="why-icon">💰</div>
           <h3>Your entire event, flat $300 rate*</h3>
-          <p>No hourly charges. No overtime surprises. One flat rate covers your entire event — whether it's 2 hours or 8. The price you see is the price you pay.</p>
+          <p>No hourly charges. No overtime surprises. One price covers your entire event — whether it's 2 hours or 8. The price you see is the price you pay.</p>
         </div>
         <div class="why-card">
           <div class="why-icon">🤖</div>
@@ -1008,7 +1008,7 @@
         <div class="price-card featured">
           <div class="price-card-name">Drop-Off Rental — Most Popular</div>
           <div class="price-amount">$300</div>
-          <div class="price-period">flat rate · your entire event*</div>
+          <div class="price-period">your entire event* · unlimited photos</div>
           <ul class="price-features">
             <li>Your entire event covered*</li>
             <li>Professional delivery to your venue</li>
@@ -1032,7 +1032,7 @@
       <div class="section-header text-center">
         <span class="tag tag-outline">Where we serve</span>
         <h2>Northeast Florida photobooth rentals</h2>
-        <p style="color:var(--mid);font-size:1.05rem;max-width:520px;margin:12px auto 0;">One flat rate covers all of Northeast Florida. No delivery surcharges, no travel fees within our service area.</p>
+        <p style="color:var(--mid);font-size:1.05rem;max-width:520px;margin:12px auto 0;">One price covers all of Northeast Florida. No delivery surcharges, no travel fees within our service area.</p>
       </div>
       <div class="area-grid">
         <a href="/jacksonville-photobooth-rental/" class="area-card">
@@ -1084,7 +1084,7 @@
         </div>
         <div class="review-card">
           <div class="stars">★★★★★</div>
-          <p class="review-text">"My daughter's quinceañera was perfect. The custom overlay matched our theme exactly and every single guest got photos. The $300 flat rate is unbeatable for what you get."</p>
+          <p class="review-text">"My daughter's quinceañera was perfect. The custom overlay matched our theme exactly and every single guest got photos. The $300 price is unbeatable for what you get."</p>
           <div class="reviewer">Maria G. — <span>Quinceañera, Orange Park</span></div>
         </div>
       </div>
@@ -1122,7 +1122,6 @@
             <li><a href="/corporate/">Corporate</a></li>
             <li><a href="/sweet-16-quinceanera/">Sweet 16 &amp; Quinceañera</a></li>
             <li><a href="/birthday-parties/">Birthday Parties</a></li>
-            <li><a href="/graduations/">Graduations</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1149,6 +1148,27 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Nav scroll effect
+  <script>
     const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function() {
+      mobileMenu.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+      if (!nav.contains(e.target)) mobileMenu.classList.remove('open');
+    });
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -57,7 +57,7 @@
         "name": "How much does a wedding photobooth rental cost in Northeast Florida?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our wedding photobooth rental starts at $300 — one flat rate that covers your entire event (up to 8 hours), delivery to your venue, unlimited photos, instant digital sharing (Wi-Fi required), and a full digital gallery after your reception. A $75 setup and breakdown fee applies to all rentals."
+          "text": "Our wedding photobooth rental starts at $300 — one price covering your entire event (up to 8 hours), delivery to your venue, unlimited photos, instant digital sharing (Wi-Fi required), and a full digital gallery after your reception. A $75 setup and breakdown fee applies to all rentals."
         }
       },
       {
@@ -160,7 +160,7 @@
     .btn-blush { background: var(--pink); color: var(--dark); }
     .btn-gold { background: var(--yellow); color: var(--dark); }
     .btn-outline-blush { background: transparent; border: 2px solid var(--dark); color: var(--dark); }
-    .btn-outline-white { background: transparent; border: 2px solid rgba(0,0,0,0.4); color: var(--dark); }
+    .btn-outline-white { background: transparent; border: 2px solid rgba(0,0,0,0.35); color: var(--dark); }
     .btn-outline-white:hover { background: var(--dark); color: white; }
     .btn-dark { background: var(--dark); color: white; }
 
@@ -193,7 +193,7 @@
     /* ── HERO ── */
     .hero {
       background: var(--pink);
-      padding: 72px 0 80px;
+      padding: 88px 0 80px;
       position: relative;
       overflow: hidden;
     }
@@ -261,12 +261,13 @@
     .hero-note a { color: var(--dark); font-weight: 700; }
 
     .hero-right { position: relative; }
+    .hero-right img { aspect-ratio: 3/4; object-fit: cover; width: 100%; border-radius: var(--radius); display: block; }
     .hero-price-ring {
       position: absolute;
       top: -20px; right: -20px;
       width: 110px; height: 110px;
       border-radius: 50%;
-      background: var(--yellow);
+      background: var(--gold);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -278,23 +279,6 @@
     }
     .hero-price-ring .amt { font-size: 1.8rem; font-weight: 900; color: var(--dark); line-height: 1; }
     .hero-price-ring .lbl { font-size: 10px; font-weight: 700; color: rgba(0,0,0,0.55); text-transform: uppercase; letter-spacing: 0.05em; }
-    .hero-img-placeholder {
-      background: rgba(255,255,255,0.15);
-      border: 2px dashed rgba(255,255,255,0.35);
-      border-radius: var(--radius);
-      aspect-ratio: 4/3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255,255,255,0.7);
-      font-family: 'Figtree', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      gap: 8px;
-      text-align: center;
-    }
-    .hero-img-placeholder .img-icon { font-size: 2.5rem; }
 
     .trust-bar { background: #F5F5F5; padding: 16px 0; border-bottom: 1px solid #EBEBEB; }
     .trust-bar-inner { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
@@ -425,7 +409,7 @@
     .price-card.secondary .price-sub { color: rgba(255,255,255,0.65); }
     .price-list { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 9px; }
     .price-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; }
-    .price-card.main .price-list li { color: var(--dark); }
+    .price-card.main .price-list li { color: var(--dark); justify-content: center; }
     .price-card.secondary .price-list li { color: rgba(255,255,255,0.85); }
     .price-list li::before { content: '✓'; font-family: 'Figtree', sans-serif; font-weight: 700; font-size: 12px; flex-shrink: 0; margin-top: 2px; }
     .price-card.main .price-list li::before { color: var(--gold); }
@@ -545,7 +529,7 @@
         </ul>
         <div class="nav-cta">
           <a href="tel:9042177078" class="nav-phone">📞 904-217-7078</a>
-          <a href="/contact/" class="btn btn-blush" style="padding:10px 20px;font-size:13px;">Get a Quote</a>
+          <a href="/book/" class="btn btn-blush" style="padding:10px 20px;font-size:13px;">Book Now</a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -560,7 +544,7 @@
     <a href="/sweet-16-quinceanera/">Sweet 16 &amp; Quinceañera</a>
     <a href="/birthday-parties/">Parties</a>
     <a href="tel:9042177078">📞 904-217-7078</a>
-    <a href="/contact/" class="btn btn-blush" style="text-align:center;">Get a Free Quote</a>
+    <a href="/book/" class="btn btn-blush" style="text-align:center;">Book Now</a>
   </div>
 
 
@@ -574,9 +558,12 @@
       <div class="petal" style="width:50px;height:50px;background:white;bottom:15%;right:5%;animation-delay:1s;animation-duration:8s;"></div>
     </div>
     <div class="container">
-      <div style="text-align:center;margin-bottom:24px;"><div class="hero-eyebrow">Wedding Photobooth Rentals · Northeast Florida</div></div>
       <div class="hero-inner">
-        <div>
+        <div class="hero-left">
+          <div style="text-align:left;">
+            <span class="hero-eyebrow">Wedding Photobooth Rentals · Northeast Florida</span>
+          </div>
+          <h1>Wedding photobooth rentals for <em>Northeast Florida</em></h1>
           <p class="hero-sub">Elegant, unmanned photobooth rentals for receptions across St. Augustine, Jacksonville, Amelia Island, Palm Coast, and Orange Park. Your entire event covered — starting at $300.</p>
           <ul class="hero-checklist">
             <li>Your entire event covered* — no hourly limits</li>
@@ -714,7 +701,7 @@
       <div class="venues-intro">
         <span class="tag tag-blush">Our service area</span>
         <h2>Northeast Florida wedding venues we love</h2>
-        <p>From St. Augustine's historic elegance to Amelia Island's coastal luxury, we know every corner of Northeast Florida's wedding scene.</p>
+        <p>From St. Augustine's historic elegance to Jacksonville's waterfront venues, we know every corner of Northeast Florida's wedding scene.</p>
       </div>
 
       <div class="venue-region">
@@ -753,43 +740,6 @@
               <li>TPC Sawgrass Clubhouse</li>
             </ul>
             <a href="/contact/" class="btn btn-blush" style="font-size:14px;padding:10px 22px;">Book for Jacksonville</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="venue-region">
-        <div class="venue-region-inner">
-          <div>
-            <span class="venue-tag">Amelia Island &amp; Fernandina Beach</span>
-            <h3>Amelia Island wedding photobooth rentals</h3>
-            <p>Amelia Island weddings offer breathtaking coastal beauty and upscale elegance. We understand the unique logistics of island weddings and ensure seamless delivery and setup for the area's premier venues.</p>
-            <ul class="venue-list">
-              <li>The Ritz-Carlton, Amelia Island</li>
-              <li>Omni Amelia Island Resort</li>
-              <li>Elizabeth Pointe Lodge</li>
-              <li>Fernandina Beach Golf Club</li>
-              <li>Historic downtown Fernandina venues</li>
-            </ul>
-            <a href="/contact/" class="btn btn-blush" style="font-size:14px;padding:10px 22px;">Book for Amelia Island</a>
-          </div>
-          <div class="venue-region-img amelia"><img src="images/venue-amelia-island.jpg" alt="Amelia Island wedding venue" style="width:100%;height:100%;object-fit:cover;" /></div>
-        </div>
-      </div>
-
-      <div class="venue-region">
-        <div class="venue-region-inner">
-          <div class="venue-region-img palm"><img src="images/venue-palm-coast.jpg" alt="Palm Coast wedding venue" style="width:100%;height:100%;object-fit:cover;" /></div>
-          <div>
-            <span class="venue-tag">Palm Coast</span>
-            <h3>Palm Coast wedding photobooth rentals</h3>
-            <p>Palm Coast's oceanfront setting creates magical backdrops for any wedding. Our weather-appropriate equipment and coastal-themed props are perfect for beach weddings and resort receptions alike.</p>
-            <ul class="venue-list">
-              <li>Hammock Beach Golf Resort &amp; Spa</li>
-              <li>Hammock Dunes Club</li>
-              <li>Private beach ceremonies</li>
-              <li>Waterfront event spaces</li>
-            </ul>
-            <a href="/contact/" class="btn btn-blush" style="font-size:14px;padding:10px 22px;">Book for Palm Coast</a>
           </div>
         </div>
       </div>
@@ -875,13 +825,13 @@
       <div class="text-center" style="margin-bottom:52px;">
         <span class="tag" style="background:rgba(0,0,0,0.08);color:var(--dark);border:1px solid rgba(0,0,0,0.12);">Transparent pricing</span>
         <h2 style="color:var(--dark);">Simple, honest wedding pricing</h2>
-        <p style="color:rgba(0,0,0,0.6);font-size:1.05rem;max-width:480px;margin:12px auto 0;">One flat rate. No hourly charges. No surprises on your wedding day.</p>
+        <p style="color:rgba(0,0,0,0.6);font-size:1.05rem;max-width:480px;margin:12px auto 0;">One price. No hourly charges. No surprises on your wedding day.</p>
       </div>
       <div class="pricing-grid" style="grid-template-columns:1fr;max-width:520px;">
-        <div class="price-card main">
+        <div class="price-card main" style="text-align:center;">
           <div class="price-eyebrow">Wedding Package — Most Popular</div>
           <div class="price-amt">$300</div>
-          <div class="price-sub">flat rate · your entire event* · no hourly limits</div>
+          <div class="price-sub">your entire event* · no hourly limits · unlimited photos</div>
           <ul class="price-list">
             <li>Your entire event covered*</li>
             <li>Professional delivery to your venue</li>
@@ -993,7 +943,7 @@
         </div>
         <div class="faq-item">
           <button class="faq-q">How much does a wedding photobooth rental cost in Northeast Florida? <span class="faq-icon">+</span></button>
-          <div class="faq-a">Our wedding photobooth rental starts at $300 — one flat rate that covers your entire event (up to 8 hours), delivery to your venue, unlimited photos, instant digital sharing (Wi-Fi required), and a full digital gallery after your reception. A $75 setup and breakdown fee applies to all rentals.</div>
+          <div class="faq-a">Our wedding photobooth rental starts at $300 — one price covering your entire event (up to 8 hours), delivery to your venue, unlimited photos, instant digital sharing (Wi-Fi required), and a full digital gallery after your reception. A $75 setup and breakdown fee applies to all rentals.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q">How far in advance should I book my wedding photobooth? <span class="faq-icon">+</span></button>
@@ -1050,7 +1000,6 @@
             <li><a href="/corporate/">Corporate</a></li>
             <li><a href="/sweet-16-quinceanera/">Sweet 16 &amp; Quinceañera</a></li>
             <li><a href="/birthday-parties/">Birthday Parties</a></li>
-            <li><a href="/graduations/">Graduations</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1077,24 +1026,23 @@
     </div>
   </footer>
 
-  <script>
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
+    <script>
+    const nav = document.getElementById("mainNav");
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("scrolled", window.scrollY > 20);
     });
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target)) mobileMenu.classList.remove('open');
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    hamburger.addEventListener("click", () => mobileMenu.classList.toggle("open"));
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target)) mobileMenu.classList.remove("open");
     });
-    // FAQ accordion
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
+    document.querySelectorAll(".faq-q").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+        document.querySelectorAll(".faq-item.open").forEach(el => el.classList.remove("open"));
+        if (!isOpen) item.classList.add("open");
       });
     });
   </script>
