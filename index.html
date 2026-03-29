@@ -548,10 +548,11 @@
     }
     .price-card:not(.featured) .price-period { color: rgba(255,255,255,0.65); }
     .price-card.featured .price-period { color: var(--mid); }
-    .price-features { list-style: none; text-align: left; margin-bottom: 24px; }
+    .price-features { list-style: none; text-align: center; margin-bottom: 24px; }
     .price-features li {
       display: flex;
       align-items: flex-start;
+      justify-content: center;
       gap: 8px;
       font-size: 14px;
       padding: 5px 0;
@@ -579,9 +580,12 @@
     .area-section { background: var(--light); }
     .area-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       margin-top: 48px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .area-card {
       background: white;
@@ -762,7 +766,7 @@
       .steps-grid { grid-template-columns: repeat(2, 1fr); }
       .steps-grid::before { display: none; }
       .why-grid { grid-template-columns: 1fr 1fr; }
-      .area-grid { grid-template-columns: repeat(3, 1fr); }
+      .area-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
@@ -773,7 +777,7 @@
       .events-grid { grid-template-columns: 1fr; }
       .pricing-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
-      .area-grid { grid-template-columns: repeat(2, 1fr); }
+      .area-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .trust-bar-inner { gap: 16px; }
       .hero { padding: 120px 0 60px; }
@@ -1101,7 +1105,7 @@
           <p class="footer-about">Northeast Florida's drop-off photobooth specialists. Unmanned rentals starting at $300 — your entire event covered. Serving Jacksonville, St. Augustine &amp; Orange Park.</p>
           <div class="footer-contact">
             <a href="tel:9042177078">📞 904-217-7078</a>
-            <a href="mailto:info@prontophotobooths.com">✉️ info@prontophotobooths.com</a>
+            <a href="/cdn-cgi/l/email-protection#3c55525a537c4c4e535248534c545348535e535348544f125f5351">✉️ <span class="__cf_email__" data-cfemail="1871767e7758686a77766c776870776c777a77776c706b367b7775">[email&#160;protected]</span></a>
           </div>
         </div>
         <div class="footer-col">
@@ -1135,7 +1139,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', function() {
       nav.classList.toggle('scrolled', window.scrollY > 20);
@@ -1145,9 +1149,4 @@
     hamburger.addEventListener('click', function() {
       mobileMenu.classList.toggle('open');
     });
-    document.addEventListener('click', function(e) {
-      if (!nav.contains(e.target)) mobileMenu.classList.remove('open');
-    });
-    document.querySelectorAll('.faq-q').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = btn.closest('.faq-item');
+    document.addEventListener('cl
