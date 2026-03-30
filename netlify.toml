@@ -1,0 +1,71 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/wedding"
+  to = "/weddings/"
+  status = 301
+
+[[redirects]]
+  from = "/corporate-events"
+  to = "/corporate/"
+  status = 301
+
+# Flat file routing — map trailing-slash URLs to .html files
+[[redirects]]
+  from = "/weddings/"
+  to = "/weddings.html"
+  status = 200
+
+[[redirects]]
+  from = "/corporate/"
+  to = "/corporate.html"
+  status = 200
+
+[[redirects]]
+  from = "/sweet-16-quinceanera/"
+  to = "/sweet-16-quinceanera.html"
+  status = 200
+
+[[redirects]]
+  from = "/birthday-parties/"
+  to = "/birthday-parties.html"
+  status = 200
+
+[[redirects]]
+  from = "/book/"
+  to = "/book.html"
+  status = 200
+
+[[redirects]]
+  from = "/jacksonville-photobooth-rental/"
+  to = "/jacksonville-photobooth-rental.html"
+  status = 200
+
+[[redirects]]
+  from = "/orange-park-photobooth-rental/"
+  to = "/orange-park-photobooth-rental.html"
+  status = 200
+
+[[redirects]]
+  from = "/st-augustine-photobooth-rental/"
+  to = "/st-augustine-photobooth-rental.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
