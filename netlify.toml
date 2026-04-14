@@ -11,6 +11,26 @@
   to = "/corporate/"
   status = 301
 
+[[redirects]]
+  from = "/category/uncategorized/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/uncategorized/hello-world/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/book-wedding-photobooth/"
+  to = "/weddings.html"
+  status = 301
+
+[[redirects]]
+  from = "/book-now/"
+  to = "/book.html"
+  status = 301
+
 # Flat file routing — map trailing-slash URLs to .html files
 [[redirects]]
   from = "/weddings/"
